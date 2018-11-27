@@ -9,5 +9,5 @@ docker push jdsoftwarestudio/multi-worker:latest
 docker push jdsoftwarestudio/multi-worker:$SHA
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=jdsoftwarestudio/multi-server:$SHA
-kubectl set image deployments/client-deployment server=jdsoftwarestudio/multi-client:$SHA
-kubectl set image deployments/worker-deployment server=jdsoftwarestudio/multi-worker:$SHA
+kubectl set image deployments/client-deployment client=jdsoftwarestudio/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=jdsoftwarestudio/multi-worker:$SHA
